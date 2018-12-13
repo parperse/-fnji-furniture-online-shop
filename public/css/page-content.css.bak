@@ -1,0 +1,64 @@
+.page-content {
+    margin-bottom: 200px;
+}
+.page-content {
+    padding-top: 115px;
+    min-height: 100vh;
+}
+.slick-dotted.slick-slider {
+    margin-bottom: 30px;
+}
+.m-link-slick {
+    line-height: 1;
+    font-size: 0;
+}
+.slick-list, .slick-slider {
+    position: relative;
+    display: block;
+}
+.slick-slider {
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.container-fluid {
+    width: 100%;
+    min-width: 1200px;
+    max-width: 1440px;
+}
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+}
+.m-link-slick .slick-dots {
+    bottom: -35px!important;
+}
+.slick-dots {
+    position: absolute;
+    bottom: -25px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+.m-link-slick .item {
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+}
+.g-ratio-box, .g-ratio-box.ratio-3-1 {
+    padding-top: 33.33%;
+}
+.g-ratio-box {
+    position: relative;
+    width: 100%;
+}

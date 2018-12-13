@@ -1,0 +1,79 @@
+
+
+.page-footer {
+    background-color: #f5f5f5;
+    padding: 80px 0 45px;
+    color: #979797;
+}
+.page-footer>.container {
+    overflow: hidden;
+}
+.page-footer .block-nav {
+    margin-left: -49px;
+    margin-bottom: 48px;
+}
+.page-footer .nav {
+    width: 150px;
+}
+.flex-column {
+    /* -webkit-box-orient: vertical!important; */
+    -ms-flex-direction: column!important;
+    flex-direction: column!important;
+}
+
+.flex-column, .flex-row {
+    -webkit-box-direction: normal!important;
+}
+.page-footer .nav>.nav-header {
+    color: #4d4d4d;
+    font-size: 14px;
+    margin-bottom: 35px;
+    line-height: 1;
+}
+
+.page-footer .nav>.nav-header {
+    border-left: 1px solid #4d4d4d;
+}
+.page-footer .nav>li {
+    padding-left: 48px;
+}
+.page-footer .nav>.nav-item>.nav-link {
+    font-size: 12px;
+    line-height: 2;
+    color: #979797;
+}
+
+.nav>.nav-item>.nav-link {
+    display: inline-block;
+    color: #666;
+}
+.nav>.nav-item>.nav-link:hover{
+    text-decoration: underline;
+    color:#000;
+}
+.fs-12 {
+    font-size: 12px;
+}
+.page-footer .u-icon-weixin {
+    background-image: url(../img/page-footer/weixin.png);
+}
+
+.page-footer .u-icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 34px;
+}
+.page-footer .u-icon-weibo {
+    background-image: url(../img/page-footer/weibo.png);
+}
+.fs-14 {
+    font-size: 14px;
+}
+.text-right {
+    text-align: right!important; 
+}
+.justify-content-between {
+    -webkit-box-pack: justify!important;
+    -ms-flex-pack: justify!important;
+    justify-content: space-between!important;
+}

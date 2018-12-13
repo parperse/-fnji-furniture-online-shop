@@ -1,0 +1,141 @@
+#app{width:100%;margin-right:auto;margin-left:auto;}
+.page-header{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	background-color:#fff;
+	z-index:1030;
+	border-bottom:1px solid #c9c9c9;}
+.font-fz{
+	font-family:FZSongKeBenXiuKaiS-R-GB,PingFangSC-Light,Helvetica Neue,Helvetica,STHeiTi,sans-serif}
+body {
+    font-family: PingFangSC-Light,Helvetica Neue,Helvetica,STHeiTi,sans-serif!important;
+    font-weight: 300;
+}
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000;
+    text-align: left;
+    background-color: #fff;
+}
+div {
+    display: block;
+}
+
+.page-header .bar-top{
+    font-size: 12px;
+    line-height: 30px;
+    background-color: #f7f7f7;
+    color: #999;
+}
+.page-header .bar-top .container{
+  position:relative;
+}
+.container{
+  width:1100px;
+}
+.container, .container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+}
+@media screen and (max-width: 1400px){
+	.container {
+			width: 1100px;
+	}
+}
+
+.block-center{
+    text-align: center;
+}
+div.page-header .bar-top .block-center .separator {
+    font-size: 20px;
+    vertical-align: middle;
+}
+.page-header .bar-top .block-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+.nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 0;
+    list-style: none;
+    padding-left: 0;
+}
+dl, ol, ul {
+    margin-top: 0;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.page-header .bar-top .nav>.nav-item>.nav-link {
+    color: #999;
+}
+.nav>.nav-item>.nav-link {
+    display: inline-block;
+    color: #666;
+}
+.page-header .bar-top .nav-link {
+    padding: 0 10px;
+}
+a, a:hover, body {
+    color: #000;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+.block-right ul.nav li.nav-item:after, .block-right ul.nav li.nav-item:first-child:before{
+    content:"\B7";
+    font-size:20px;
+    vertical-align: middle;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+.d-flex {
+    display: -webkit-box!important;
+    display: -ms-flexbox!important;
+    display: flex!important;
+}
+.center-menu {
+    margin-left: 210px;
+}
+.page-header .navbar-brand {
+    display: inline-block;
+    width: 62px;
+    height: 85px;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-image: url(img/page-header/fnji.png);
+    background-size: cover;
+    background-position: 50%;
+}
+.page-header .navbar-nav {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display:inline-flex;
+clear:both;
+}
+.page-header .navbar-nav>.nav-item {
+    
+    padding: 0 auto;
+}
+.nav>.nav-item.active>.nav-link {
+    color: #000;
+    border-color: #000;
+}
