@@ -48,6 +48,7 @@ $(function(){
       cut.attr('disabled',false);
     }
   })
+  
   cut.click(function(){
     cartNum.val(parseInt(cartNum.val())-1);
     if(parseInt(cartNum.val())==1){

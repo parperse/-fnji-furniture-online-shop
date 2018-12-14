@@ -20,16 +20,16 @@ window.onload = function(){
 
 /*引入header*/
 $(function(){
-  $("<link rel='styleheet' href='../css/fnji-header.css>").appendTo('head');
+  $("<link rel='styleheet' href='..css/fnji-header.css'>").appendTo('head');
   $("#page-header").load('fnji-header.html');
 })
 /*引入footer*/
 $(function(){
-  $("<link rel='styleheet' href='../css/fnji-footer.css>").appendTo('head');
+  $("<link rel='styleheet' href='..css/fnji-footer.css'>").appendTo('head');
   $("#page-footer").load('fnji-footer.html');
 })
 //引入login
 $(function(){
-  $("<link rel='styleheet' href='../css/fnji-login.css>").appendTo('head');
-  $("#login").load('fnji-login.html');
+  $("<link rel='styleheet' href='css/fnji-login.css'>").appendTo('head');
+  $("#login").load('fnji_login.html');
 })
