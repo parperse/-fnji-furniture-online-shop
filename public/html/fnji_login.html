@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=1440">
-  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>梵几·家具品牌 fnji furniture online shop</title>
-  <link rel="stylesheet" href="../css/fnji-login.css">
-
-</head>
-<body>
-  <div class="modal modal-member-login" style="display: none;">
+<div class="modal modal-member-login" style="display: none;">
     <div class="modal-dialog">
         <div class="modal-content">
             <button class="close" onclick="out()">×</button> 
@@ -34,10 +22,10 @@
                     </div> 
                     <form>
                         <div class="form-row form-row-phone">
-                            <input type="text" autocomplete="off" placeholder="手机" required="required" class="form-control"> <button type="button" class="btn verify-code">验证</button></div> <div class="form-row"><input type="text" autocomplete="off" placeholder="验证码" required="required" class="form-control"></div> 
+                            <input type="text" autocomplete="off" placeholder="手机" required="required" class="form-control phone"> <button type="button" class="btn verify-code">验证</button></div> <div class="form-row"><input type="text" autocomplete="off" placeholder="验证码" required="required" class="form-control verify-code" id="verify-code"></div> 
                             <div class="form-row" style="height: 18px;"></div> 
                             <div class="block-btn">
-                                <button type="submit" class="btn">登录</button>
+                                <button type="submit" class="btn" id="login1">登录</button>
                             </div>
                     </form> 
                         <div class="text-muted">
@@ -52,7 +40,3 @@
         </div>
     </div>
 </div>
-<script src="../js/jquery-1.11.3.js"></script>
-<script src="../js/fnji_common.js"></script>
-</body>
-</html>

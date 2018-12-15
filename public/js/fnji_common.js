@@ -33,3 +33,7 @@ $(function(){
   $("<link rel='styleheet' href='../css/fnji-login.css'>").appendTo('head');
   $("#login").load('fnji_login.html');
 })
+// $(function(){
+//   $("<link rel='styleheet' href='../css/furniturn-list.css'>").appendTo('head');
+//   $("#register").load('fnji_register.html');
+// })
