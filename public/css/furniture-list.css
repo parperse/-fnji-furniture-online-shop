@@ -2359,6 +2359,7 @@ a,a:hover,body {
  visibility:hidden;
  background-color:hsla(0,0%,100%,.5)
 }
+/* 鼠标移入cell-overlay 可见 */
 .m-list-table .cell:hover .cell-overlay {
  visibility:visible
 }
