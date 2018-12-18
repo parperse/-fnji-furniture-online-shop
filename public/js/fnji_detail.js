@@ -50,9 +50,9 @@ $(function(){
   })
   
   cut.click(function(){
-    cartNum.val(parseInt(cartNum.val())-1);
     if(parseInt(cartNum.val())==1){
       cut.attr('disabled',true);
-    }
+    }else
+    cartNum.val(parseInt(cartNum.val())-1);
   })
 })
