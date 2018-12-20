@@ -7,6 +7,7 @@ const cors =require('cors');
 //引用session
 // const session =require('session');
 const user= require("./routes/user");
+const index =require("./routes/fnji_index")
 
 var app = express();
 app.listen(3000);
@@ -18,3 +19,4 @@ app.use(cors({
 }))
 /*使用路由器来管理路由*/
 app.use("/user",user);
+app.use("/index",index);
