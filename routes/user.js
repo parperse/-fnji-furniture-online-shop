@@ -15,4 +15,17 @@ router.post('/login',(req,res)=>{
     }
   })
 })
+router.get("/islogin",(req,res)=>{
+  if(req.session.uid===undefined)
+    res.send({ok:0});
+  else
+    res.send({ok:1});
+})
+router.post('/register',(req,res)=>{
+  var phone = req.body.phone;
+  var validate = req.body.validate;
+  var upwd = req.body.upwd;
+  var sql = 'INSERT INTO fnji_user (uid,upwd,phone,validate) VALUES()'
+  pool.query(sql,)
+})
 module.exports = router;
