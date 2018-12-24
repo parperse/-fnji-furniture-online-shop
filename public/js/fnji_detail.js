@@ -35,27 +35,8 @@ function Carousel(event){
     b=$(b);
     z.attr("src",`${b.attr("src")}`)
   }  
-} 
-/* 购物车数量加减功能 */
-$(function(){
-  var add = $(".input-group-append").children();
-  var cut = $(".input-group-prepend").children();
-  var cartNum = $(".input-group-prepend").next();
-  
-  add.click(function(){
-    cartNum.val(parseInt(cartNum.val())+1);
-    if(parseInt(cartNum.val())!=1){
-      cut.attr('disabled',false);
-    }
-  })
-  
-  cut.click(function(){
-    if(parseInt(cartNum.val())==1){
-      cut.attr('disabled',true);
-    }else
-    cartNum.val(parseInt(cartNum.val())-1);
-  })
-})
+}
+
 $(function(){
   var id = document.location.search.slice(4);
   $.ajax({
@@ -64,9 +45,7 @@ $(function(){
     data:{id},
     dataType:"json",
     success: function(res){
-      // console.log(res.pic);
       console.log(res);
-      var 
       var p = res[0];
       var {subtitle,price,material,pic,title}=p;
       var pic = pic.split(",");
@@ -208,5 +187,28 @@ $(function(){
       div.innerHTML=html;
   
     }
+  })
+})
+
+/* 购物车数量加减功能 */
+$(function(){
+  var add = $(".num-input-group>.input-group-append").children();
+  var cut = $(".num-input-group>.input-group-prepend").children();
+  var cartNum = $(".input-group-prepend").next();
+  
+  add.click(function(){
+    console.log(1);
+    cartNum.val(parseInt(cartNum.val())+1);
+    if(parseInt(cartNum.val())!=1){
+      cut.attr('disabled',false);
+
+    }
+  })
+  
+  cut.click(function(){
+    if(parseInt(cartNum.val())==1){
+      cut.attr('disabled',true);
+    }else
+    cartNum.val(parseInt(cartNum.val())-1);
   })
 })

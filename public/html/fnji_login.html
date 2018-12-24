@@ -1,42 +1,46 @@
 <div class="modal modal-member-login" style="display: none;">
     <div class="modal-dialog">
         <div class="modal-content">
-            <button class="close" onclick="out()">×</button> 
+            <button class="close" onclick="out()">×</button>
             <div class="d-flex justify-content-between">
                 <div class="block-left">
                     <div class="modal-title">
-                    手机扫码登录
-                    </div> 
-                <div class="block-qrcode">
-                    <div id="wx_qrcode">
-                        <iframe src="https://open.weixin.qq.com/connect/qrconnect?appid=wx9d5a22c9e6d334c2&amp;scope=snsapi_login&amp;redirect_uri=http%3A%2F%2Fsyas.fnji.com%2Fs%2Fmember%2FwxCallback%3FbackUrl%3D%2Fcart&amp;state=undefined&amp;login_type=jssdk&amp;href=data:text/css;base64,KiB7DQogICAgbWFyZ2luOiAwOw0KICAgIHBhZGRpbmc6IDA7DQp9DQouaW1wb3dlckJveCB7DQogICAgbGluZS1oZWlnaHQ6IDE7DQogICAgZm9udC1zaXplOiAwOw0KfQ0KLmltcG93ZXJCb3ggLnRpdGxlLA0KLmltcG93ZXJCb3ggLmluZm8NCnsNCiAgICBkaXNwbGF5OiBub25lOw0KfQ0KLmltcG93ZXJCb3ggLnFyY29kZSB7DQogICAgYm9yZGVyOiBub25lOw0KICAgIG1hcmdpbi10b3A6IDA7DQogICAgd2lkdGg6IDE1MHB4Ow0KfQ==" frameborder="0" scrolling="no" sandbox="allow-top-navigation allow-forms allow-scripts allow-same-origin" width="300px" height="400px"></iframe>
+                        手机扫码登录
                     </div>
-                </div> 
+                    <div class="block-qrcode">
+                        <div id="wx_qrcode">
+                            <iframe src="https://open.weixin.qq.com/connect/qrconnect?appid=wx9d5a22c9e6d334c2&amp;scope=snsapi_login&amp;redirect_uri=http%3A%2F%2Fsyas.fnji.com%2Fs%2Fmember%2FwxCallback%3FbackUrl%3D%2Fcart&amp;state=undefined&amp;login_type=jssdk&amp;href=data:text/css;base64,KiB7DQogICAgbWFyZ2luOiAwOw0KICAgIHBhZGRpbmc6IDA7DQp9DQouaW1wb3dlckJveCB7DQogICAgbGluZS1oZWlnaHQ6IDE7DQogICAgZm9udC1zaXplOiAwOw0KfQ0KLmltcG93ZXJCb3ggLnRpdGxlLA0KLmltcG93ZXJCb3ggLmluZm8NCnsNCiAgICBkaXNwbGF5OiBub25lOw0KfQ0KLmltcG93ZXJCb3ggLnFyY29kZSB7DQogICAgYm9yZGVyOiBub25lOw0KICAgIG1hcmdpbi10b3A6IDA7DQogICAgd2lkdGg6IDE1MHB4Ow0KfQ=="
+                                frameborder="0" scrolling="no" sandbox="allow-top-navigation allow-forms allow-scripts allow-same-origin"
+                                width="300px" height="400px"></iframe>
+                        </div>
+                    </div>
                     <div class="text-muted">
-                    打开微信扫一扫登录
+                        打开微信扫一扫登录
+                    </div>
                 </div>
-                </div> <!----> 
+                <!---->
                 <div class="block-right">
                     <div class="modal-title">
                         手机快捷登录
-                    </div> 
+                    </div>
                     <form>
                         <div class="form-row form-row-phone">
-                            <input type="text" autocomplete="off" placeholder="手机" required="required" class="form-control phone"> 
+                            <input type="text" autocomplete="off" placeholder="手机" required="required" class="form-control phone">
                             <button type="button" class="btn verify-code">验证</button>
-                        </div> 
+                        </div>
                         <div class="form-row">
-                            <input type="text" autocomplete="off" placeholder="验证码" required="required" class="form-control verify-code" id="verify-code">
-                        </div> 
-                        <div class="form-row" style="height: 18px;"></div> 
+                            <input type="text" autocomplete="off" placeholder="验证码" required="required" class="form-control verify-code"
+                                id="verify-code">
+                        </div>
+                        <div class="form-row" style="height: 18px;"></div>
                         <div class="block-btn">
                             <button type="button" class="btn" id="login1">登录</button>
                         </div>
-                    </form> 
+                    </form>
                     <div class="text-muted">
                         还没有梵几账号
                         <a href="javascript:" class="link">点击注册</a>
-                    </div> 
+                    </div>
                     <div class="block-btn">
                         <button class="btn btn-muted">账户登录</button>
                     </div>
