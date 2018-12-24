@@ -1,56 +1,55 @@
 /*鼠标滑动轮播*/
-function Carousel(event){
-  x=event.clientX;
-  var i=$(".img360_images img");
-  var z=$(".m-image-360 .img360_shelf .inner img")
-  var c=$(".indicator-inner a .icon_dot");
-  c=$(c);
-  z=$(z);
-  if(x<=142){
-    var b= i[0];
-    b=$(b);
-    z.attr("src",`${b.attr("src")}`);
+
+function Carousel(event) {
+  x = event.clientX;
+  var i = $(".img360_images img");
+  var z = $(".m-image-360 .img360_shelf .inner img")
+  var c = $(".indicator-inner a .icon_dot");
+  c = $(c);
+  z = $(z);
+  if (x <= 142) {
+    var b = i[0];
+    b = $(b);
+    z.attr("src", `${b.attr("src")}`);
     c.addClass("active")
-  }else if(x>142&&x<=284){
-    var b= i[1];
-    b=$(b);
-    z.attr("src",`${b.attr("src")}`);
+  } else if (x > 142 && x <= 284) {
+    var b = i[1];
+    b = $(b);
+    z.attr("src", `${b.attr("src")}`);
     c.addClass("active")
-  }else if(x>284&&x<=426){
-    var b= i[2];
-    b=$(b);
-    z.attr("src",`${b.attr("src")}`);
+  } else if (x > 284 && x <= 426) {
+    var b = i[2];
+    b = $(b);
+    z.attr("src", `${b.attr("src")}`);
     c.addClass("active")
-  }else if(x>426&&x<=568){
-    var b= i[3];
-    b=$(b);
-    z.attr("src",`${b.attr("src")}`)
+  } else if (x > 426 && x <= 568) {
+    var b = i[3];
+    b = $(b);
+    z.attr("src", `${b.attr("src")}`)
   }
-  else if(x>426&&x<=568){
-    var b= i[3];
-    b=$(b);
-    z.attr("src",`${b.attr("src")}`)
-  }else if(x>568&&x<=710){
-    var b= i[4];
-    b=$(b);
-    z.attr("src",`${b.attr("src")}`)
-  }  
+  else if (x > 426 && x <= 568) {
+    var b = i[3];
+    b = $(b);
+    z.attr("src", `${b.attr("src")}`)
+  } else if (x > 568 && x <= 710) {
+    var b = i[4];
+    b = $(b);
+    z.attr("src", `${b.attr("src")}`)
+  }
 }
 
-$(function(){
+$(function () {
   var id = document.location.search.slice(4);
   $.ajax({
-    url:"http://localhost:3000/detail",
-    type:"get",
-    data:{id},
-    dataType:"json",
-    success: function(res){
-      console.log(res);
+    url: "http://localhost:3000/detail",
+    type: "get",
+    data: { id },
+    dataType: "json",
+    success: function (res) {
       var p = res[0];
-      var {subtitle,price,material,pic,title}=p;
+      var { subtitle, price, material, pic, title } = p;
       var pic = pic.split(",");
-      console.log(pic)
-       var html=`
+      var html = `
        <div class="block-images">
        <div style="background-color: rgb(248, 242, 229);">
          <div class="m-image-360" style="position: relative;">
@@ -150,11 +149,11 @@ $(function(){
        <div>
          <div class="input-group num-input-group">
            <div class="input-group-prepend">
-             <button class="btn">-</button>
+             <button class="btn" id="reduce">-</button>
            </div> 
            <input type="text" class="form-control" value="1" disabled> 
            <div class="input-group-append">
-             <button class="btn">+</button>
+             <button class="btn" id="add">+</button>
            </div>
          </div>
        </div> 
@@ -182,33 +181,32 @@ $(function(){
 </div>
 </div>
        `
+      var div = document.querySelector("div.m-sku-info>div.d-flex");
+      div.innerHTML = html;
+      $(function () {
+        var add = $("#add");
+        var cut = $("#reduce");
+        var cartNum =  add.parent(div).prev();
 
-      var div= document.querySelector("div.m-sku-info>div.d-flex");
-      div.innerHTML=html;
-  
+        add.click(function () {
+          cartNum.val(parseInt(cartNum.val()) + 1);
+          if (parseInt(cartNum.val()) != 1) {
+            cut.attr('disabled', false);
+
+          }
+        })
+
+        cut.click(function () {
+          if (parseInt(cartNum.val()) == 1) {
+            cut.attr('disabled', true);
+          } else
+            cartNum.val(parseInt(cartNum.val()) - 1);
+        })
+      })
     }
   })
-})
+},
+
+)
 
 /* 购物车数量加减功能 */
-$(function(){
-  var add = $(".num-input-group>.input-group-append").children();
-  var cut = $(".num-input-group>.input-group-prepend").children();
-  var cartNum = $(".input-group-prepend").next();
-  
-  add.click(function(){
-    console.log(1);
-    cartNum.val(parseInt(cartNum.val())+1);
-    if(parseInt(cartNum.val())!=1){
-      cut.attr('disabled',false);
-
-    }
-  })
-  
-  cut.click(function(){
-    if(parseInt(cartNum.val())==1){
-      cut.attr('disabled',true);
-    }else
-    cartNum.val(parseInt(cartNum.val())-1);
-  })
-})
