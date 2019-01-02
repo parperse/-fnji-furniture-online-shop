@@ -1,5 +1,4 @@
 $(function(){
-  
     $.ajax({
       url:"http://localhost:3000/index",
       type:"get",
@@ -63,8 +62,8 @@ $(function(){
             td.innerHTML=html;
       }
     })
-    // .then(res=>{ 
-      
-    // })
-    //http://localhost:3000
+})
+// 轮播图组件
+$(function(){
+    
 })
